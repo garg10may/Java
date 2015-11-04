@@ -1,5 +1,5 @@
 
-public class Exercise6 {
+public class Exercise06 {
 	
 	public static int multiply(int[] l) {
 		int m = 1;
