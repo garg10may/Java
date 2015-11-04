@@ -10,7 +10,7 @@ public class Exercise18 {
 
 		for (char c = 'a'; c <= 'z'; c++) {
 
-			if (Exercise9.is_member(c, y)) {
+			if (Exercise09.is_member(c, y)) {
 
 				status = 1;
 			} else {

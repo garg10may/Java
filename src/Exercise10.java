@@ -4,7 +4,7 @@ public class Exercise10 {
 
 		for (int i = 0; i < x.length; i++) {
 
-			if (Exercise9.is_member(x[i], y)) {
+			if (Exercise09.is_member(x[i], y)) {
 
 				return true;
 			}

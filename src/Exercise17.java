@@ -16,7 +16,7 @@ public class Exercise17 {
 			}
 		}
 
-		if (Exercise8.is_palindrome(s)) {
+		if (Exercise08.is_palindrome(s)) {
 			return true;
 		} else {
 			return false;
