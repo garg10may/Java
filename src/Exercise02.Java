@@ -1,4 +1,4 @@
-public class Excercise2 {
+public class Excercise02 {
 	
 	
 	public static int max(int a, int b , int c) {
