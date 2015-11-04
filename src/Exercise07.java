@@ -1,4 +1,4 @@
-public class Exercise7 {
+public class Exercise07 {
 
 	public static String reverse(String x) {
 
