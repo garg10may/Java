@@ -1,4 +1,4 @@
-public class Exercise3 {
+public class Exercise03 {
 
 	public static int length(String x) {
 		
