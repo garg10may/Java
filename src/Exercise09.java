@@ -1,4 +1,4 @@
-public class Exercise9 {
+public class Exercise09 {
 
 	public static boolean is_member(char x, char[] y) {
 
