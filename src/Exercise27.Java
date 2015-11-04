@@ -30,21 +30,23 @@ public class Exercise27 {
 		}
 
 		for (int i = 0; i < list.size(); i++) {
-			
+
 			String line2 = list.get(i);
-			
+
 			list.remove(i);
-			
-			String reversed_line = Exercise07.reverse( line2);
 
-			//System.out.println(Exercise07.reverse( list.get(i) ) );
+			String reversed_line = Exercise07.reverse(line2);
 
-			if ( list.contains( reversed_line ) ) {
-				
+			// System.out.println(Exercise07.reverse( list.get(i) ) );
+
+			if (list.contains(reversed_line)) {
+
 				System.out.println(line2);
-				
-				System.out.println( reversed_line) ;
+
+				System.out.println(reversed_line);
 			}
+
+			br.close();
 		}
 	}
 
