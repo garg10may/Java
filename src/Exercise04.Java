@@ -1,4 +1,4 @@
-public class Exercise4 {
+public class Exercise04 {
 
 	public static boolean vowel(char x) {
 
