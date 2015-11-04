@@ -1,8 +1,8 @@
-public class Exercise8 {
+public class Exercise08 {
 
 	public static boolean is_palindrome(String x) {
 
-		if (Exercise7.reverse(x).equals(x)) {
+		if (Exercise07.reverse(x).equals(x)) {
 
 			return true;
 		} else {
