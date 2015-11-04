@@ -1,4 +1,4 @@
-class Exercise5 {
+class Exercise05 {
 
 	public static void translate(String x) {
 
