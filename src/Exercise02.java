@@ -1,4 +1,9 @@
-public class Excercise02 {
+/*
+ * Define a function max_of_three() that takes three numbers as arguments and returns the largest of them.
+ */
+
+
+public class Exercise02 {
 	
 	
 	public static int max(int a, int b , int c) {

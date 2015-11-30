@@ -1,3 +1,8 @@
+/*
+ * Define a function max() that takes two numbers as arguments and returns the largest of them.
+ */
+
+
 public class Exercise01 {
 
 	public static int max(int a, int b) {

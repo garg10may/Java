@@ -1,6 +1,11 @@
+/*
+ * Write a program that maps a list of words into a list of integers representing the lengths of the corresponding words.
+ */
+
+
 import java.util.Arrays;
 
-/*
+/*  /////// Using Array List //////
 import java.util.ArrayList;
 
 public class Exercise14 {
@@ -28,7 +33,7 @@ public class Exercise14 {
 }
  */
 
-//alter
+//////// Using Array ///////
 public class Exercise14 {
 
 	public static int[] map(String[] x) {

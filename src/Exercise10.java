@@ -1,5 +1,12 @@
+/*
+ * Define a function overlapping() that takes two lists and returns True
+ * if they have at least one member in common, False otherwise. You may use your is_member() function,
+ * but for the sake of the exercise, you should (also) write it using two nested for-loops.
+ */
+
 public class Exercise10 {
 
+	/// Using is_member() function
 	public static boolean overlapping(char[] x, char[] y) {
 
 		for (int i = 0; i < x.length; i++) {
@@ -12,6 +19,7 @@ public class Exercise10 {
 		return false;
 	}
 
+	/// Using two nested for loops
 	public static boolean overlapping2(char[] x, char[] y) {
 
 		for (int i = 0; i < x.length; i++) {

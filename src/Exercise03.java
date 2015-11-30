@@ -1,3 +1,8 @@
+/*
+ * Define a function that computes the length of a given list or string. It's true there a built in length method but write it yourself. 
+ */
+
+
 public class Exercise03 {
 
 	public static int length(String x) {

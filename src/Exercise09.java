@@ -1,3 +1,8 @@
+/*
+ * Write a function is_member() that takes a value (i.e. a number, string, etc) x and a list
+ * of values a, and returns True if x is a member of a, False otherwise.
+ */
+
 public class Exercise09 {
 
 	public static boolean is_member(char x, char[] y) {
