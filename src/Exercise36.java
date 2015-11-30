@@ -24,8 +24,6 @@ class Exercise36 {
 
 		String line;
 
-		String[] l;
-
 		String regex = "\\w+";
 
 		Pattern p = Pattern.compile(regex);
@@ -62,6 +60,8 @@ class Exercise36 {
 
 			}
 		}
+		
+		br.close();
 
 		return hapaxes;
 	}
