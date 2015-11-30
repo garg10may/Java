@@ -13,7 +13,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class Exercise29 {
+class Exercise36 {
 
 	public static ArrayList<String> hapax_legomenon(String x)
 			throws IOException {
