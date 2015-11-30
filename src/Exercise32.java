@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Exercise26 {
+public class Exercise32 {
 	
 	public static void palindrome( String x ) throws IOException {
 		

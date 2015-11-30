@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Exercise27 {
+public class Exercise33 {
 
 	public static void semordnilap(String x) throws IOException {
 
