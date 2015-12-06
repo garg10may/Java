@@ -22,13 +22,15 @@ public class Exercise44 {
 
 		Random random = new Random();
 
-		Integer length = brackets.size();
+		String[] choices = { "[", "]" };
+
+		int choice = choices.length;
 
 		for (int i = 0; i < n; i++) {
 
-			Integer randInt = random.nextInt(length-1);
+			Integer randInt = random.nextInt(choice);
 
-			brackets.add(brackets.get(randInt));
+			brackets.add(choices[randInt]);
 
 		}
 
@@ -78,7 +80,6 @@ public class Exercise44 {
 
 	public static void main(String[] args) {
 
-		
-		System.out.println(find_balanced(4));
+		System.out.println(find_balanced(2));
 	}
 }
