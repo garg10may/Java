@@ -69,6 +69,6 @@ class Exercise41 {
 
 	public static void main(String[] args) {
 
-		lingo("tiger");
+		lingo("boxer");
 	}
 }
