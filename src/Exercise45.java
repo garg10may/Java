@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-
 /*
 A certain childrens game involves starting with a word in a particular category. Each participant in
 turn says a word, but that word must begin with the final letter of the previous word. 
@@ -25,6 +20,12 @@ porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
 sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
 tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask
 */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Exercise45 {
 
@@ -75,28 +76,37 @@ public class Exercise45 {
 		try {
 
 			options.removeAll(chain);
-			
-			System.out.println(options);
-			
-			System.out.println(chain);
-			
-			System.out.println(allChains);
-			
-			System.out.println();
 
-			for (String i : options) {
+			if (options.isEmpty()) {
 
-				ArrayList<String> growingChain = new ArrayList<String>();
+				return chain;
 
-				growingChain.addAll(chain);
+			} else {
 
-				growingChain.add(i);
+				HashSet<String> clone = (HashSet<String>) options.clone();
 
-				allChains.add(find(growingChain));
+				for (String i : clone) { // sometimes I don't know why my code
+											// works or not works
+
+					ArrayList<String> growingChain = new ArrayList<String>();
+
+					growingChain.addAll(chain);
+
+					growingChain.add(i);
+
+					allChains.add(find(growingChain));
+
+				}
+
+				ArrayList<String> maxList = Collections.max(allChains, new Comparator<ArrayList<String>>() {
+					public int compare(ArrayList<String> list1, ArrayList<String> list2) {						
+						return Integer.compare(list1.size(), list2.size());
+					}					
+				});
+
+				return maxList;
 
 			}
-
-			return allChains.stream().max(Comparator.comparingInt(ArrayList::size)).get();
 
 		} catch (NullPointerException e) {
 
@@ -108,12 +118,29 @@ public class Exercise45 {
 	public static void main(String[] args) {
 
 		initializeHashMap();
+		
 		makeHashMap();
 
-		ArrayList<String> a = new ArrayList<String>();
-		a.add("bagon");
+		ArrayList<ArrayList<String>> allWordsMaxes = new ArrayList<ArrayList<String>>();
 
-		System.out.println(find(a));
+		for (String i : pokemonArray) {
+
+			ArrayList<String> word = new ArrayList<String>();
+
+			word.add(i);
+
+			allWordsMaxes.add(find(word));
+
+			
+		}
+		
+		System.out.println(allWordsMaxes);
+
+		ArrayList<String> longest = allWordsMaxes.stream().max(Comparator.comparingInt(ArrayList::size)).get();
+
+		System.out.println(longest);
+		
+		System.out.println(longest.size());
 
 	}
 }
