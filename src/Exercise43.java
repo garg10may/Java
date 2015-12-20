@@ -78,7 +78,7 @@ public class Exercise43 {
 
 		return text;
 	}
-
+	
 	public static Integer findMaxKey(HashMap<String, ArrayList<String>> map) {
 
 		ArrayList<Integer> contentSize = new ArrayList<Integer>();
