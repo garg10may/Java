@@ -131,16 +131,11 @@ public class Exercise45 {
 
 			allWordsMaxes.add(find(word));
 
-			
 		}
-		
-		System.out.println(allWordsMaxes);
 
 		ArrayList<String> longest = allWordsMaxes.stream().max(Comparator.comparingInt(ArrayList::size)).get();
 
 		System.out.println(longest);
-		
-		System.out.println(longest.size());
 
 	}
 }
