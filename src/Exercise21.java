@@ -5,10 +5,11 @@
 
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Exercise21 {
 
-	public static HashMap<Character, Integer> initialize_map(String x, HashMap<Character, Integer> m) {
+	public static Map<Character, Integer> initialize_map(String x, Map<Character, Integer> m) {
 
 		for (int i = 0; i < x.length(); i++) {
 			
@@ -25,9 +26,9 @@ public class Exercise21 {
 
 	}
 
-	public static HashMap<Character, Integer> char_freq(String x) {
+	public static Map<Character, Integer> char_freq(String x) {
 
-		HashMap<Character, Integer> m = new HashMap<Character, Integer>();
+		Map<Character, Integer> m = new HashMap<Character, Integer>();
 
 		m = initialize_map(x, m);
 

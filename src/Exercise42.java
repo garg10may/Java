@@ -1,3 +1,4 @@
+
 /*
 A sentence splitter is a program capable of splitting a text into sentences. 
 The standard set of heuristics for sentence splitting includes (but isn't limited to) the following rules:
@@ -38,11 +39,11 @@ public class Exercise42 {
 		Pattern r = Pattern.compile(p);
 
 		Matcher m = r.matcher(text);
-		
-		while ( m.find() ) {
-			
-			for ( int i =0; i<= m.groupCount(); i++) {
-				
+
+		while (m.find()) {
+
+			for (int i = 0; i <= m.groupCount(); i++) {
+
 				System.out.println(m.group(i));
 			}
 		}
@@ -50,7 +51,7 @@ public class Exercise42 {
 	}
 
 	public static void main(String[] args) {
-		
+
 		splitter();
 
 	}
