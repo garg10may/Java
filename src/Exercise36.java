@@ -16,12 +16,12 @@ import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class Exercise36 {
 
+	// using HashMap
 	public static ArrayList<String> hapax_legomenon(String x)
 
 			throws IOException {
@@ -74,22 +74,23 @@ class Exercise36 {
 		return hapaxes;
 	}
 
+	// Using Set and Scanner
 	public static Set<String> hapax_legomenon2(String x) throws FileNotFoundException {
 
 		Scanner file = new Scanner(new File(x)).useDelimiter("[^a-zA-Z]");
 
 		Set<String> s = new HashSet<String>();
-		
+
 		Set<String> s2 = new HashSet<String>();
 
 		while (file.hasNext()) {
 
 			String word = file.next().trim().toLowerCase();
-			
+
 			if (s.contains(word)) {
 
-				s2.add(word); //words which are more than once 
-				
+				s2.add(word); // words which are more than once
+
 			} else {
 
 				s.add(word);
@@ -100,7 +101,7 @@ class Exercise36 {
 		file.close();
 
 		s.removeAll(s2);
-		
+
 		return s;
 
 	}
