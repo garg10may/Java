@@ -1,5 +1,5 @@
 /*
- * Define a function max() that takes two numbers as arguments and returns the largest of them.
+ * Define a function max() that takes two numbers as arguments and returns the largest of them. .
  */
 
 

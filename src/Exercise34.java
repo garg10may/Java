@@ -83,7 +83,7 @@ public class Exercise34 {
 
 	public static void main(String[] args) throws IOException {
 
-		Map<Character, Integer> map = char_freq_table("C:\\Users\\garg10may\\Desktop\\unixdict.txt");
+		Map<Character, Integer> map = char_freq_table("C:\\unixdict.txt");
 		
 		for ( Entry<Character, Integer> entry: map.entrySet()) {
 			
