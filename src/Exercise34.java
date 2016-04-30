@@ -64,11 +64,18 @@ public class Exercise34 {
 
 		while ((line = br.readLine()) != null) {
 
-			Exercise21.initialize_map(line, m);
+			//Exercise21.initialize_map(line, m);
 
 			for (Character c : line.toCharArray()) {
 
-				m.put(c, m.get(c) + 1);
+				if (m.get(c) != null) {
+					
+					m.put(c, m.get(c) + 1);
+					
+				} else {
+					
+					m.put(c, 1);
+				}
 			}
 		}
 
