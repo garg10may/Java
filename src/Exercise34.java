@@ -25,6 +25,8 @@ public class Exercise34 {
 	    {
 
 	        List<Entry<Character, Integer>> list = new LinkedList<Entry<Character, Integer>>(unsortMap.entrySet());
+	        
+	        System.out.println(list);
 
 	        // Sorting the list based on values, can also be done based on keys but in that case using TreeMap would also work
 	        Collections.sort(list, new Comparator<Entry<Character, Integer>>()
@@ -81,7 +83,7 @@ public class Exercise34 {
 
 		br.close();
 
-		Map<Character, Integer> sortedMapASC = sortByComparator(m,ASC);
+		Map<Character, Integer> sortedMapASC = sortByComparator(m,DESC);
 		
 		return sortedMapASC;
 		

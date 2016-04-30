@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+// Some common implementations
+
 class StringLengthComparator implements Comparator<String> {
 
 	@Override
@@ -64,6 +66,8 @@ public class App {
 			System.out.println(i);
 		}
 		
+		System.out.println();
+		
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		
 		numbers.add(1);
@@ -78,7 +82,7 @@ public class App {
 			@Override
 			public int compare(Integer o1, Integer o2) {
 				// TODO Auto-generated method stub
-				return -o1.compareTo(o2);
+				return o1.compareTo(o2);
 			}
 		});
 		
