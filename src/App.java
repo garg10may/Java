@@ -39,58 +39,94 @@ class ReverseAlphabeticalComparator implements Comparator<String> {
 
 	@Override
 	public int compare(String o1, String o2) {
-		// TODO Auto-generated method stub
 		return -o1.compareTo(o2);
 	}
 
 }
 
+class ReverseAlphabeticalComparator2 implements Comparator<String> {
+
+	public int compare(String o1, String o2) {
+		return o2.compareTo(o1);
+	}
+}
+
 public class App {
 
 	public static void main(String[] args) {
-		
-		///Sorting Lists
+
+		/// Sorting Lists
 
 		ArrayList<String> animal = new ArrayList<String>();
 
-		animal.add("snake");
-		animal.add("catlllll");
-		animal.add("lion");
-		animal.add("mouse");
-		animal.add("elephant");
+		animal.add("snake a");
+		animal.add("cat b");
+		animal.add("lion c");
+		animal.add("mouse d");
+		animal.add("elephant e ");
+		animal.add("hippopotamus f");
+
+		Collections.sort(animal);
+		System.out.println(animal);
+
+		Collections.sort(animal, new AlphabeticalComparator());
+		System.out.println(animal);
 
 		Collections.sort(animal, new ReverseAlphabeticalComparator());
+		System.out.println(animal);
 
-		for (String i : animal) {
+		Collections.sort(animal, new ReverseAlphabeticalComparator2());
+		System.out.println(animal);
 
-			System.out.println(i);
-		}
-		
-		System.out.println();
-		
-		ArrayList<Integer> numbers = new ArrayList<Integer>();
-		
-		numbers.add(1);
-		numbers.add(2);
-		numbers.add(3);
-		numbers.add(-34);
-		numbers.add(23432);
-		numbers.add(923472);
-		
-		Collections.sort(numbers, new Comparator<Integer>() {
+		Collections.sort(animal, new StringLengthComparator());
+		System.out.println(animal);
 
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				// TODO Auto-generated method stub
+		Collections.sort(animal, new Comparator<String>() {
+
+			public int compare(String o1, String o2) {
 				return o1.compareTo(o2);
 			}
 		});
-		
-		for ( Integer i : numbers) {
-			
-			System.out.println(i);
-		}
-		
+		System.out.println(animal);
+
+		// Java 8
+		Collections.sort(animal, (x, y) -> x.compareTo(y));
+		System.out.println(animal);
+
+		Collections.sort(animal, (x, y) -> y.compareTo(x));
+		System.out.println(animal);
+
+		Collections.sort(animal, (x, y) -> x.length() - y.length());
+		System.out.println(animal);
+
+		Collections.sort(animal, (x, y) -> y.length() - x.length());
+		System.out.println(animal);
+
+		Collections.sort(animal, Comparator.comparing(x -> x.length()));
+		System.out.println(animal);
+
+		Collections.sort(animal, Comparator.comparing(x -> -x.length()));
+		System.out.println(animal);
+
+		Collections.sort(animal, Comparator.comparing(x -> x.split(" ", 0)[1]));
+		System.out.println(animal);
+
+		animal.sort(null);
+		System.out.println(animal);
+
+		animal.sort(Comparator.reverseOrder());
+		System.out.println(animal);
+
+		animal.sort((x, y) -> x.length() - y.length());
+		System.out.println(animal);
+
+		animal.add("pig a");
+		animal.add("cheetah a");
+
+		Comparator<String> c = Comparator.comparing(x -> ((String) x).split(" ", 0)[1]);
+		Collections.sort(animal, c.thenComparing((x, y) -> x.compareTo(y)));
+		System.out.println(animal);
+
 	}
 
 }
